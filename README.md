@@ -2,7 +2,7 @@
 
 ## Chapter Zero
 
-## 00.1  Environment & Vocabulary
+### 00.1  Environment & Vocabulary
   - [Environment & Vocabulary Video](https://youtu.be/5qTrDPcJg4Y)
 
 
