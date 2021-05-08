@@ -7,12 +7,24 @@ public class Human {
         age = humanAge;
     }
 
-    public String talk() {
-        return "Hi! I am " + name + ", and I am " + age + " years old.";
+    public String getName() {
+        return name;
     }
 
-    public String selfIntroduce() {
-        return "Hi! I am " + name + ", and I am " + age + " years old.";
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int humanAge) {
+        age = humanAge;
+    }
+
+    public void talk(String speech) {
+        System.out.println(speech);
+    }
+
+    public void selfIntroduce() {
+        talk("Hi! I am " + name + ", and I am " + age + " years old.");
     }
 
     public void grow() {

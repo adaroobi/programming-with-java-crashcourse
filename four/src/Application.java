@@ -4,8 +4,14 @@ public class Application {
 
         Human fatima = new Human("Fatima", 23);
 
-        System.out.println(ahmed.selfIntroduce());
-        System.out.println(fatima.selfIntroduce());
-//        System.out.println(ahmed.age);
+        ahmed.selfIntroduce();
+        ahmed.setAge(50);
+        ahmed.selfIntroduce();
+
+        fatima.selfIntroduce();
+        fatima.setAge(40);
+        fatima.selfIntroduce();
+
+        ahmed.talk("Hello");
     }
 }
