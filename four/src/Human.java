@@ -10,6 +10,15 @@ public class Human {
         age = humanAge;
     }
 
+    public Human(String humanName) {
+        name = humanName;
+        age = 0;
+    }
+
+    public static Human born(String humanName) {
+        return new Human(humanName);
+    }
+
     public String getName() {
         return name;
     }
@@ -33,14 +42,18 @@ public class Human {
     }
 
     public void talk(String speech) {
-        if (age >= talkingAge) {
-            System.out.println(speech);
-        } else {
-            System.out.println("Waaaaaaaaa");
+        if (age < talkingAge) {
+            speech = "Waaaaaaaa";
         }
+
+        System.out.println(speech);
     }
 
-    public void selfIntroduce() {
+    public void talk() {
+        selfIntroduce();
+    }
+
+    private void selfIntroduce() {
         talk("Hi! I am " + name + ", and I am " + age + " years old. My oxygen intake is " + oxygenIntake);
     }
 
