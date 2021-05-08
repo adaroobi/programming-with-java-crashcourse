@@ -1,6 +1,9 @@
 public class Human {
-    final private String name;
-    private int age;
+    final private String name; // Instance Variable
+    private int age; // Instance Variable
+
+    public static String oxygenIntake = "Breathing"; // Class Variable
+    private static int talkingAge = 2; // Class variable
 
     public Human(String humanName, int humanAge) {
         name = humanName;
@@ -11,8 +14,18 @@ public class Human {
         return name;
     }
 
+    // Instance method
     public int getAge() {
         return age;
+    }
+
+    // Class Method
+    public static int getTalkingAge() {
+        return talkingAge;
+    }
+
+    public static void setTalkingAge(int humanTalkingAge) {
+        talkingAge = humanTalkingAge;
     }
 
     public void setAge(int humanAge) {
@@ -20,11 +33,15 @@ public class Human {
     }
 
     public void talk(String speech) {
-        System.out.println(speech);
+        if (age >= talkingAge) {
+            System.out.println(speech);
+        } else {
+            System.out.println("Waaaaaaaaa");
+        }
     }
 
     public void selfIntroduce() {
-        talk("Hi! I am " + name + ", and I am " + age + " years old.");
+        talk("Hi! I am " + name + ", and I am " + age + " years old. My oxygen intake is " + oxygenIntake);
     }
 
     public void grow() {
