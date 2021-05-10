@@ -1,29 +1,17 @@
 public class Application {
     public static void main(String[] args) {
         Human ahmed = new Human("Ahmed", 20);
-        Human fatima = new Human("Fatima", 23);
-        Human mohamed = new Human("Mohamed", 1);
-        Human sarah = Human.born("Sarah");
 
-        Human ahmed2 = ahmed;
+        Food apple = new Food("Apple");
+        Drink water = new Drink("Water");
+        Cloth shirt = new Cloth();
 
-        println(ahmed.toString());
-        println(ahmed2.toString());
+        ahmed.eastOrDrink(shirt);
 
-        ahmed2.setAge(50);
+        ahmed.consume(water);
+        ahmed.consume(water);
 
-        int x = 1;
-        int y = x;
-        y = 6;
-
-        String n = "String";
-        String m = n;
-        m = "Stringa";
-
-        println(ahmed.getAge());
-        println(y == x);
-        println(n == m);
-
+//        System.out.println();
     }
 
     private static void println(String text) {

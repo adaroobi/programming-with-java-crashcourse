@@ -1,3 +1,5 @@
+import java.security.InvalidParameterException;
+
 public class Human {
     final private String name; // Instance Variable
     private int age; // Instance Variable
@@ -7,12 +9,12 @@ public class Human {
 
     public Human(String humanName, int humanAge) {
         name = humanName;
-        age = humanAge;
+        setAge(humanAge);
     }
 
     public Human(String humanName) {
         name = humanName;
-        age = 0;
+        setAge(0);
     }
 
     public static Human born(String humanName) {
@@ -38,7 +40,21 @@ public class Human {
     }
 
     public void setAge(int humanAge) {
+        if (humanAge >= 150 || humanAge < 0) {
+            throw new InvalidParameterException("Invalid Age. Age must be between 0 and 150");
+        }
+
         age = humanAge;
+    }
+
+    public void consume(Consumable consumable) {
+        System.out.println("I am " + consumable.consume() + " " + consumable.getName());
+    }
+
+    public void eastOrDrink(Consumable consumable) {
+        if (consumable instanceof Food || consumable instanceof Drink) {
+            // ....
+        }
     }
 
     public void talk(String speech) {
